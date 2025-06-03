@@ -1,5 +1,4 @@
 import { createApp } from 'vue';
-import { LoadingPlugin } from 'vue-loading-overlay';
 import store from './store';
 import App from './App.vue';
 import router from './router';
@@ -40,7 +39,6 @@ import Panel from 'primevue/panel';
 
 createApp(App)
   .use(ToastService)
-  .use(LoadingPlugin)
   .use(store)
   .use(router)
   .use(PrimVue, {

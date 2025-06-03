@@ -9,6 +9,9 @@
 
 <script>
   export default {
+    mounted() {
+      document.title = this.$store.state.title;
+    },
     data() {
       return {
       }

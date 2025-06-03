@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
+import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite';
@@ -10,13 +11,22 @@ export default defineConfig({
     vue(),
     Components({
       resolvers: [
-          PrimeVueResolver()
+        PrimeVueResolver()
       ]
-  })
+    }),
+    tailwindcss(),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  preview: { // for production
+    host: '127.0.0.1',
+    port: 8000
+  },
+  server:{ // for dev
+    host: '127.0.0.1',
+    port: 8001
+  }
 })
