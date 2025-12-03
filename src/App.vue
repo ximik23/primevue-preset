@@ -4,6 +4,7 @@
     <Button label='text' severity='help'/>
     <Button label='text' severity='warn'/>
     <Button label='text' severity='danger'/>
+    <p>123321</p>
   </div>
 </template>
 
